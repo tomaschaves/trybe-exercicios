@@ -1,0 +1,44 @@
+p{
+    text-align: center;
+}
+
+div:hover{
+    background-color:aqua;
+    padding: 1px;
+}
+
+li:active{
+    font-size: larger;
+}
+
+ol, ul{
+    list-style:none
+}
+
+div:nth-of-type(odd){
+    font-style: italic;
+}
+
+div:nth-of-type(1){
+    color: red;
+}
+
+div:nth-of-type(2){
+    color:purple;
+    font-size: larger;
+}
+
+div:nth-of-type(3){
+    color:green;
+    font-size: larger;
+}
+
+div:nth-of-type(4){
+    color: crimson;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div:nth-of-type(5){
+    color:lightpink;
+    font-size: small;
+}
