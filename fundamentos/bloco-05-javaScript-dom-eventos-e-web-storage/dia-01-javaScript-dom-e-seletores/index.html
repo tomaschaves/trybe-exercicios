@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+      
+      function changeTag() {
+      const text = document.getElementsByTagName('p');
+      text[1].innerText = 'Me vejo';
+      }
+      changeTag();
+
+
+      function changeBackgroundColorToGreen() {
+        let quadradoVerde = document.getElementsByClassName('main-content')[0];
+        quadradoVerde.style.background = 'rgb(76,164,109)';
+      }
+      
+      changeBackgroundColorToGreen();
+
+      function redToWhite(){
+        let quadradoBranco = document.getElementsByClassName('center-content')[0];
+        quadradoBranco.style.background = "white";
+      }
+      
+      redToWhite();
+
+      function correct(){
+        let corrige = document.getElementsByTagName('h1')[0];
+        corrige.innerHTML = "Exercício - JavaScript";
+      }
+
+      correct();
+
+      function capital(){
+        let maiusculo = document.getElementsByTagName("p")[0];
+        maiusculo.innerHTML = maiusculo.innerHTML.toUpperCase();
+      }
+
+      capital();
+
+      function paragraphs(){
+        let printP = document.getElementsByTagName('p');
+  
+          for (let index = 0; index < printP.length; index += 1){
+              console.log(printP[index].innerHTML);
+          }
+      }
+
+      paragraphs();
+
+    </script>
+  </body>
+</html>
