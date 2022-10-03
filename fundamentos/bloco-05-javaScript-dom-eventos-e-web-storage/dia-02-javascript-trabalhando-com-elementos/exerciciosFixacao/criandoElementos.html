@@ -1,0 +1,49 @@
+<main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+  <script>
+
+//Crie um irmão para elementoOndeVoceEsta.
+  function criarIrmao(){
+    const estouPai = document.getElementById("elementoOndeVoceEsta").parentElement;   
+    let irmao = document.createElement('section');
+    estouPai.appendChild(irmao);
+    irmao.id = "irmãoElementoOndeVoceEsta";
+  }    
+
+  criarIrmao();
+
+//Crie um filho para elementoOndeVoceEsta.
+  function criarFilhoEstou1(){
+    const estou = document.getElementById("elementoOndeVoceEsta");   
+    let filho = document.createElement('section');
+    estou.appendChild(filho);
+    filho.id = "filhoElementoOndeVoceEsta";
+  }
+
+  criarFilhoEstou1();
+
+//Crie um filho para primeiroFilhoDoFilho.
+  function criarFilhoDoFilho(){
+    const estou = document.getElementById("primeiroFilhoDoFilho");   
+    let filho = document.createElement('section');
+    estou.appendChild(filho);
+    filho.id = "filhoPrimeiroFilhoDoFilho";
+  }
+
+  criarFilhoDoFilho();
+
+//A partir desse filho criado, acesse terceiroFilho.
+  let acessoTerceiroFilho = document.getElementById("filhoPrimeiroFilhoDoFilho");
+  console.log(acessoTerceiroFilho);
+
+  </script>
