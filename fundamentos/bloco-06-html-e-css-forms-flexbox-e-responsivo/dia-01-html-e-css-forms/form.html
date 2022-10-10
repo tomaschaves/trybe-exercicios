@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Concurso TrybeTrip</h1>
+<form action="" method="GET" enctype="multipart/form-data">
+<fieldset>
+    <label>Nome Completo: <input type="text" id="User" name="Name" minlength="10" maxlength="40" required></label>
+    <br>
+    <label>Email: <input type="text" id="User" name="Name" minlength="10" maxlength="50" required></label>
+    <br>
+    <label for="radio">Destino preferido:</label>
+    <br>
+    <input id="city" type="radio" value="city" name="opcao"> <!--colocando 'city' como id na opção aqui,-->
+    <label for="city">Cidade</label>    <!--consigo alocar o clique em qualquer lugar da palavra da opção, não só na bolinha, ao usar o for='' -->
+    <input id="countryside" type="radio" value="countryside" name="opcao">
+    <label for="countryside">Campo</label>
+    <input id="beach" type="radio" value="beach" name="opcao">
+    <label for="beach">Praia</label>
+    <input id="mountains" type="radio" value="mountains" name="opcao">
+    <label for="mountains">Montanhas</label>
+    <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+    <br>
+    <textarea name="answer" id="typeAnswer" cols="7" rows="10" style="width: 330px; height: 130px" maxlength="500"></textarea>
+    <br>
+    <label for="viagem">Qual a melhor data para realizar sua viagem?</label>
+    <input type="date" id="viagem" name="viagem">
+    <br>
+    <label for="oportunities">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+    <input type="checkbox" id="oportunities">
+    <br>
+    <label for="photos">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+    <input type="checkbox" id="photos" required>
+    <br>
+    <button type="submit" id="submit">Enviar</button>
+</fieldset>
+</form>
+</body>
+<script src="script.js"></script>
+</html>
