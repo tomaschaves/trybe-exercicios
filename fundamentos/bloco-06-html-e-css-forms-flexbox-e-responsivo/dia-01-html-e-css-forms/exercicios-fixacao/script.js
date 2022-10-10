@@ -1,0 +1,33 @@
+// SELETORES
+const INPUT_TEXT = document.querySelector("#input-text");
+const INPUT_CHECKBOX = document.querySelector("#input-checkbox");
+const HREF_LINK = document.querySelector("#href");
+
+
+
+// Adicione um evento click no elemento a que possui o id href. Na função do evento, implemente o método .preventDefault() para prevenir o comportamento padrão do elemento. Ou seja, ao clicar no link, nada deve acontecer.
+function clique (event){
+    let elemento = document.getElementById('href');
+    event.preventDefault();
+}
+
+addEventListener('click', clique);
+
+// Adicione um evento click no elemento checkbox que possui o id input-checkbox. Na função do evento, implemente o método .preventDefault() para prevenir o comportamento padrão do elemento. Ou seja, ao clicar na caixinha, nada deve acontecer.
+function check(event){
+    let checkB = document.getElementById('input-checkbox'); 
+    event.preventDefault();
+}
+
+addEventListener('click', check);
+
+// Adicione um evento keypress no elemento input type="text" que possui o id input-text. Na função do evento, implemente o método .preventDefault() de forma que somente o caractere a (letra ‘a’ minúscula) possa ser digitado na caixinha. (dica: para capturar a tecla digitada, utilize o event.key)
+
+function pressionar(event){
+    let pressed = document.getElementById('input-text');
+    if (event.key !== 'a'){
+        event.preventDefault();
+    }
+}
+
+addEventListener('keypress', pressionar);
