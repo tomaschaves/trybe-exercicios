@@ -15,18 +15,43 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
+    function verifyIsNumber (number1, number2) {
+      if (!number1 || !number2) {
+        throw new Error("Insira dois números para realizar a soma.");
+      }
+      if (isNaN(number1) || isNaN(number2)) {
+        throw new Error("Insira dois números válidos para realizar a soma.");
+      }
+    }
     function sum() {
-      const value1 = document.getElementById('value1').value;
+      try {
+        const value1 = document.getElementById('value1').value;
       const value2 = document.getElementById('value2').value;
+      verifyIsNumber(value1, value2);
       const result = Number(value1) + Number(value2);
       document.getElementById('result').innerHTML = `Resultado: ${result}`;
-      document.getElementById('value1').value = '';
-      document.getElementById('value2').value = '';
+      } catch (error) {
+        document.getElementById('result').innerHTML = `Erro: ${error.message}`;
+      } finally {
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
+      }
     }
     window.onload = () => {
       const button = document.getElementById('button');
       button.addEventListener('click', sum);
     }
+
   </script>
 </body>
 </html>
+
+
+
+<!-- Crie erros personalizados.
+Utilize o throw new Error e o bloco try/catch.
+Evite funções que tenham muitas responsabilidades distintas.
+Caso a pessoa usuária nao preencha nenhum input, ou preencha apenas um input, lance um erro.
+Caso os valores inseridos nos inputs pela pessoa usuária não sejam números, lance um erro. Você pode fazer essa verificação utilizando a função isNan().
+Adicione o texto dos erros no parágrafo com id result, para que a pessoa usuária saiba o que aconteceu. Lembre-se de usar erros descritivos!
+Utilize o finally para apagar os valores dos inputs ao final do bloco try/catch. -->
