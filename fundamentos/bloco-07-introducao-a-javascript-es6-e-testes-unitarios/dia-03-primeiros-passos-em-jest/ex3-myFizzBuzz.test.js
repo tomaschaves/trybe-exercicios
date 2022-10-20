@@ -17,6 +17,3 @@ describe ('testa a função myFizzBuzz', () =>{
     expect(myFizzBuzz('olá')).toBe(false);
   });  
 })
-
-// Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado  o próprio número
-// Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado  false
