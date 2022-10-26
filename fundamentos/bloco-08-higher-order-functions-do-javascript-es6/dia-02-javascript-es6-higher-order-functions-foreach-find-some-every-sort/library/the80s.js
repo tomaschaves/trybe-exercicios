@@ -1,4 +1,3 @@
-const books = require('./data');
 const library = require('./data');
 const expectedResult = true;
 
