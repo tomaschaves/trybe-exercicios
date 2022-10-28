@@ -19,7 +19,7 @@ function containsA() {
     }, 0);
   });
 
-  return numbersOfA;
+  return numbersOfA;                                //preciso retornar esse valor
 }
 
 console.log(containsA());
