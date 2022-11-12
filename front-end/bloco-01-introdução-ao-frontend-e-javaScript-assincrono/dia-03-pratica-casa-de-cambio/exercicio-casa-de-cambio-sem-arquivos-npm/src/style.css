@@ -1,0 +1,32 @@
+h1 {
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.change {
+  color: #95EBA8;
+}
+
+body {
+  background-color: #282C33;
+}
+
+#textCoin {
+  color: white;
+}
+
+/* #coin {
+
+}
+
+#search {
+
+} */
+
+.hidden {
+  visibility: hidden;
+}
+
+.values {
+  color: white;
+}
